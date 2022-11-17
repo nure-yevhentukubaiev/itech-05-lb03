@@ -1,11 +1,12 @@
 let rowNum = 0;
+let appendCall = 0;
 
 function paintGeneration() {
 	return;
 }
 
 function randomDataRow() {
-	return Math.random() + "a";
+	return "<tr><td>" + (Math.random() * 42) + "</tr></td>";
 }
 
 function runGeneration() {
@@ -18,10 +19,11 @@ function runGeneration() {
 // function stopGeneration()
 jQuery(document).ready(function() {
 	$("#run-generation").click(function() {
-		setInterval(runGeneration(), 420);
+		runGeneration();
+		appendCall = setInterval(runGeneration, 420);
 	});
 	
 	$("#stop-generation").click(function() {
-		clearInterval();
+		clearInterval(appendCall);
 	});
 });
