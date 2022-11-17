@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<!--Написать скрпит, случайным образом генерирующий данные и выводящий их пользователю в виде таблицы, в которой постепенно добавляются новые строки. Должно отличаться оформление четных и нечетных строк данных, а также первой строки таблицы (заголовочной). Перед началом вывода пользователь может указать интервал, с которым появляются новые строки с данными. Предоставить возможность останавливать генерацию данных.-->
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>itech-05-lb03</title>
+	<script type="text/javascript" src="jquery-3.6.1.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+	<form>
+		<label for="append-interval">Append interval (seconds)</label>
+		<input type="text" id="append-interval" placeholder="seconds.miliseconds" value="0.42">
+		<input type="button" id="stop-generation" value="Stop">
+		<input type="button" id="run-generation" value="Run">
+		<input type="reset" value="Reset">
+	</form>
+	<hr>
+	<p id="table-begin">Table beginning</p>
+	<table id="random-table" border="1"></table>
+</body>
+</html>
